@@ -1,5 +1,7 @@
-/**
- * Created by lobunets on 15.11.2014.
- */
+import java.util.List;
+
+
 public class Blog {
+    List<Record> records;
+
 }
