@@ -1,8 +1,6 @@
 import java.io.File;
 
-/**
- * Created by lobunets on 15.11.2014.
- */
+
 public class Attachment {
     private String name;
     private String attachmentpath;

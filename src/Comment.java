@@ -1,8 +1,6 @@
 import java.util.Date;
 
-/**
- * Created by lobunets on 15.11.2014.
- */
+
 public class Comment extends Record{
 
 
