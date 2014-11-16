@@ -13,4 +13,6 @@ public class Comment extends Record{
         this.postername = postername;
 
     }
+
+
 }

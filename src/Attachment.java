@@ -8,6 +8,11 @@ public class Attachment {
     private String attachmentpath;
 
 
+    Attachment(String name, String attachmentpath){
+        this.name = name;
+        this.attachmentpath = attachmentpath;
+    }
+
     public String getName() {
         return name;
     }
