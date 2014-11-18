@@ -1,3 +1,5 @@
+package blog.qa.bsm.lohika.com;
+
 import java.util.List;
 
 
