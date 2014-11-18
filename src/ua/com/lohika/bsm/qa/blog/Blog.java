@@ -1,4 +1,4 @@
-package blog.qa.bsm.lohika.com;
+package ua.com.lohika.bsm.qa.blog;
 
 import java.util.List;
 import java.util.Scanner;
@@ -42,9 +42,9 @@ public class Blog {
 
     public void mainMenu(){
         System.out.println("==========================");
-        System.out.println("Create new blog.qa.bsm.lohika.com.Post (CREATE)");
-        System.out.println("Get a specific blog.qa.bsm.lohika.com.Post (GET)");
-        System.out.println("Edit blog.qa.bsm.lohika.com.Post (EDIT)");
+        System.out.println("Create new Post (CREATE)");
+        System.out.println("Get a specific Post (GET)");
+        System.out.println("Edit Post (EDIT)");
         System.out.println("Delete post (DELETE)");
         System.out.println("Get all Posts (ALL)");
         System.out.println("Exit (EXIT)");

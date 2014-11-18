@@ -1,4 +1,4 @@
-package blog.qa.bsm.lohika.com;
+package ua.com.lohika.bsm.qa.blog;
 
 import java.util.List;
 
