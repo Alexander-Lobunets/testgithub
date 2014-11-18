@@ -5,10 +5,38 @@ import java.util.List;
 
 public class Post extends Record {
 
-    String caption;
-    List<Comment> comments; // comments list
-    List<String> pictures;
-    List<Attachment> attachments;
+    private String title;
+    private List<Comment> comments; // comments list
+
+
+
+    private List<Attachment> attachments;
+//    List<Object> objects;
+
+    Post(String title,
+         String body,
+         String username,
+         List<String> attachments)
+    {
+        this.title = title;
+        this.body = body;
+        this.username = username;
+        this.recorddate = getRecorddate();
+        this.comments = null;
+        this.attachments = null;
+    }
+
+
+    public List<Attachment> getAttachments() {
+        return attachments;
+    }
+
+    public void addAttachment(List<Attachment> attachments) {
+        this.attachments = attachments;
+    }
+
+
+
 
 
 }

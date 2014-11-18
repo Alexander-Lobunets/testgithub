@@ -6,8 +6,8 @@ import java.util.Date;
 public abstract class Record {
 
     String body;
-    Date postdate;
-    String postername;
+    String recorddate;
+    String username;
 
 
     public String getBody() {
@@ -18,21 +18,21 @@ public abstract class Record {
         this.body = body;
     }
 
-    public Date getPostdate() {
-        return postdate;
+    public String getRecorddate() {
+        Date date = new Date();
+        return date.toString();
     }
 
-    public void setPostdate(Date postdate) {
-        this.postdate = postdate;
+
+    public String getUsername() {
+        return username;
     }
 
-    public String getPostername() {
-        return postername;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setPostername(String postername) {
-        this.postername = postername;
-    }
+
 
 
 }

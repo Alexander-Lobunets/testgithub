@@ -4,21 +4,21 @@ import java.io.File;
 
 
 public class Attachment {
-    private String name;
+    private String description;
     private String attachmentpath;
 
 
-    Attachment(String name, String attachmentpath){
-        this.name = name;
+    Attachment(String description, String attachmentpath){
+        this.description = description;
         this.attachmentpath = attachmentpath;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getAttachmentpath() {

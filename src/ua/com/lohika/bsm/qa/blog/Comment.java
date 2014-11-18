@@ -7,10 +7,10 @@ public class Comment extends Record{
 
 
 
-    Comment(Date postdate, String body, String postername){
-        this.postdate = postdate;
+    Comment(String postdate, String body, String username){
+        this.recorddate = postdate;
         this.body = body;
-        this.postername = postername;
+        this.username = username;
 
     }
 
