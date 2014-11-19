@@ -1,5 +1,7 @@
 package ua.com.lohika.bsm.qa.blog;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -7,10 +9,8 @@ import java.util.Scanner;
 public class Blog {
 
 
+
     private List<Record> records;
-//    enum POST {CREATE, GET, EDIT, DELETE, ALL, EXIT}
-
-
     public List<Record> getRecords() {
         return records;
     }
@@ -29,18 +29,12 @@ public class Blog {
         return records.get(id);
     }
 
-    public void addRecord(){
-
-
-
-    }
-
-
-
 
 
 
     public void mainMenu(){
+
+
         System.out.println("==========================");
         System.out.println("Create new Post (CREATE)");
         System.out.println("Get a specific Post (GET)");
@@ -57,20 +51,26 @@ public class Blog {
         postAction = sc.next();
         switch (postAction){
             case "CREATE":
-                System.out.println("create");
-//                Post post = new Post();
-//                post.setBody();
                 System.out.println("Type post title");
-                String title = sc.next();
+                String title = sc.nextLine();
+                sc.nextLine();
                 System.out.println("Type post body text");
-                String body = sc.next();
+                String body = sc.nextLine();
+                System.out.println("Type your username");
+                String username = sc.nextLine();
+                List<Attachment> attachments = new ArrayList<>();
+                Record post = new Post(title, body, username, attachments);
 
-
+                System.out.println(records);
+                records.add(post);
+                System.out.println(records);
+                System.out.println("The post created successfully");
 
                 break;
 
             case "GET":
-                System.out.println("get");
+                System.out.println("Please enter the specific Post ID ");
+//                int id =
                 break;
 
             case "EDIT":
@@ -81,7 +81,15 @@ public class Blog {
                 break;
 
             case "ALL":
-                System.out.println("all");
+//                System.out.println("all");
+
+
+                Iterator<Record> iterRecords = records.iterator();
+                while(iterRecords.hasNext()){
+                    System.out.println(iterRecords.next());
+                }
+
+
                 break;
 
             case "EXIT":
@@ -97,7 +105,9 @@ public class Blog {
     }
 
     void go(){
+        records = new ArrayList<>();
         while (true){
+
             mainMenu();
             mainMenuSwitch();
 

@@ -16,7 +16,7 @@ public class Post extends Record {
     Post(String title,
          String body,
          String username,
-         List<String> attachments)
+         List<Attachment> attachments)
     {
         this.title = title;
         this.body = body;
