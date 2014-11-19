@@ -18,10 +18,11 @@ public class Post extends Record {
          String username,
          List<Attachment> attachments)
     {
+
         this.title = title;
         this.body = body;
         this.username = username;
-        this.recorddate = getRecorddate();
+        this.recordDate = getRecordDate();
         this.comments = null;
         this.attachments = null;
     }
@@ -36,7 +37,11 @@ public class Post extends Record {
     }
 
 
+    public String getTitle() {
+        return title;
+    }
 
-
-
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }

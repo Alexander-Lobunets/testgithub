@@ -6,7 +6,7 @@ import java.util.Date;
 public abstract class Record {
 
     String body;
-    String recorddate;
+    String recordDate;
     String username;
 
 
@@ -18,11 +18,14 @@ public abstract class Record {
         this.body = body;
     }
 
-    public String getRecorddate() {
+    public void setRecordDate() {
         Date date = new Date();
-        return date.toString();
+        recordDate = date.toString();
     }
 
+    public String getRecordDate() {
+        return recordDate;
+    }
 
     public String getUsername() {
         return username;

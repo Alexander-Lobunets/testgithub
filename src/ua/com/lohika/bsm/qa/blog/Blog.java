@@ -29,11 +29,7 @@ public class Blog {
         return records.get(id);
     }
 
-
-
-
     public void mainMenu(){
-
 
         System.out.println("==========================");
         System.out.println("Create new Post (CREATE)");
@@ -70,7 +66,32 @@ public class Blog {
 
             case "GET":
                 System.out.println("Please enter the specific Post ID ");
-//                int id =
+                int id = 0;
+//                while(!sc.hasNextInt()){
+//                    System.out.println("Please enter the Post ID. Ex.: 1");
+////                    id = sc.nextInt();
+//                }
+
+//                System.out.println("ID = " + id);
+
+                boolean incorrectID = true;
+                while(incorrectID) {
+                    id = sc.nextInt();
+                    if ((records.size() - 1) < id) {
+                        System.out.printf("The post with ID %d doesn't exist.\n", id);
+                    } else {
+                        incorrectID = false;
+                    }
+                }
+                Post postget = (Post) records.get(id);
+                System.out.println("Title: " + postget.getTitle());
+                System.out.println("Body: " + postget.getBody());
+                System.out.println("Date: + " + postget.getRecordDate());
+                System.out.println("Created by " + postget.getUsername());
+                /** must be implemented later
+                 * System.out.println("Comments:"  );
+                System.out.println("Attachments: "); */
+
                 break;
 
             case "EDIT":
