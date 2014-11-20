@@ -18,7 +18,7 @@ public abstract class Record {
         this.body = body;
     }
 
-    public void setRecordDate() {
+    public void setCurrentDate() {
         Date date = new Date();
         recordDate = date.toString();
     }
